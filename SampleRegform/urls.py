@@ -18,9 +18,7 @@ from django.urls import path, include
 from regformapp.views import StudentView, StudentMark
 from rest_framework.routers import DefaultRouter
 
-router = DefaultRouter()
-router.register('form', StudentView)
-router.register('mark', StudentMark)
+
 urlpatterns = [
-    path('api/', include(router.urls))
+    path('',include('regformapp.urls'))
 ]
